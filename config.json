@@ -2,7 +2,7 @@
 	{
 		"title": "登录",
 		"login": true,
-		"url": "/voter/login",
+		"url": "/login",
 		"method": "POST",
 		"data": {
 			"username": "zhixinwen",
@@ -12,12 +12,12 @@
 	{
 		"title": "登出",
 		"logout": true,
-		"url": "/voter/logout",
+		"url": "/logout",
 		"method": "GET"
 	},
 	{
 		"title": "获取用户信息",
-		"url": "/voter/user",
+		"url": "/user",
 		"method": "GET"
 	}
 ]
