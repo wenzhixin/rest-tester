@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>index</title>
+  <meta name="description" content="" />
+  <meta name="author" content="zhixin wen" />
+  <link rel="stylesheet" href="css/qunit-1.10.0.css" />
+  <style>
+  	.mt5 {margin-top: 5px;}
+  	.none {display: none;}
+  </style>
+</head>
+<body>
+  <label><input id="autoTest" type="checkbox" />自动测试</label>
+  <span id="loginLogout">
+  	(<a id="onLogin" href="javascript:void(0)">登录后</a> 
+  	<a id="onLogout" href="javascript:void(0)">登出后</a>)
+  </span>
+  <div id="request" class="mt5 none"></div>
+  <div id="qunit" class="mt5"></div>
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/qunit-1.10.0.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

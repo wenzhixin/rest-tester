@@ -1,0 +1,23 @@
+[
+	{
+		"title": "登录",
+		"login": true,
+		"url": "/voter/login",
+		"method": "POST",
+		"data": {
+			"username": "zhixinwen",
+			"password": "xiaowen"
+		}
+	},
+	{
+		"title": "登出",
+		"logout": true,
+		"url": "/voter/logout",
+		"method": "GET"
+	},
+	{
+		"title": "获取用户信息",
+		"url": "/voter/user",
+		"method": "GET"
+	}
+]
