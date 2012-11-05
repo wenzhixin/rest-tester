@@ -5,8 +5,8 @@
 		"url": "/login",
 		"method": "POST",
 		"data": {
-			"username": "zhixinwen",
-			"password": "xiaowen"
+			"username": "admin",
+			"password": "admin"
 		}
 	},
 	{
