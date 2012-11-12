@@ -19,3 +19,4 @@
 * data: 发送的数据
 * login: 表示为登录接口
 * logout: 表示为登出接口
+* enable: 是否启动该接口(true/false)
