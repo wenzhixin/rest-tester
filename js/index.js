@@ -89,6 +89,7 @@ $(function() {
 	function listRequest() {
 		$.each(list, function(i, request) {
 			if (i == loginIndex || i == logoutIndex) return;
+			if (request.enable === false) return;
 			onRequest(request);
 		});
 	};
