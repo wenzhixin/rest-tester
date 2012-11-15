@@ -20,3 +20,9 @@
 * login: 表示为登录接口
 * logout: 表示为登出接口
 * enable: 是否启动该接口(true/false)
+
+
+## author: 
+
+* 邮箱: wenzhixin2010@gmail.com  
+* 微博: <a href="http://weibo.com/2292826740">@_文翼_</a> 
