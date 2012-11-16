@@ -41,6 +41,9 @@ $(function() {
 				if (request.login) loginIndex = i;
 				if (request.logout) logoutIndex = i;
 			});
+			if (loginIndex == -1) {
+				$('#loginLogout').hide();
+			}
 			$('#request').html(html);
 			autoTest();
 		});
@@ -75,6 +78,10 @@ $(function() {
 	}
 	
 	function autoTest(logout) {
+		if (loginIndex == -1) {
+			listRequest();
+			return;
+		}
 		if (!logout) {
 			onRequest(list[loginIndex], function() {
 				listRequest();
