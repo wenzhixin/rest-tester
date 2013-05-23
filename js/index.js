@@ -56,7 +56,13 @@ $(function() {
 			dataType : 'json',
 			success: function(data) {
 				test(request.title, function() {
-					ok(true, '测试状态码为：200。' + (data ? '返回的数据为：' + JSON.stringify(data) : ''));
+					ok(true, '测试状态码为：200。', function($json) {
+						if (!data) return;
+						new PrettyJSON.view.Node({ 
+			                el: $json, 
+			                data: data
+			            });
+					});
 					if (callback) callback();
 				});
 			},
