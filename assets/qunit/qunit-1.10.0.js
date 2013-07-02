@@ -415,7 +415,7 @@ QUnit.assert = {
 	 * @function
 	 * @example ok( "asdfasdf".length > 5, "There must be at least 5 chars" );
 	 */
-	ok: function( result, msg ) {
+	ok: function( result, msg , callback ) {
 		if ( !config.current ) {
 			throw new Error( "ok() assertion outside test context, was " + sourceFromStacktrace(2) );
 		}
@@ -430,7 +430,7 @@ QUnit.assert = {
 			};
 
 		msg = escapeInnerText( msg || (result ? "okay" : "failed" ) );
-		msg = "<span class='test-message'>" + msg + "</span>";
+		msg = "<div class='test-message'>" + msg + "</div><div class='test-json'></div>";
 
 //		if ( !result ) {
 //			source = sourceFromStacktrace( 2 );
@@ -444,6 +444,21 @@ QUnit.assert = {
 			result: result,
 			message: msg
 		});
+		
+		//check callback
+		var checkJSONEl = function(id, callback) {
+			$json = $('#' + id + ' .test-json');
+			if ($json.length === 0) {
+				setTimeout(function() {
+					checkJSONEl(id, callback); 
+				}, 200);
+				return;
+			}
+			callback($json);
+		}
+		if (typeof callback === 'function') {
+			checkJSONEl(config.current.id, callback);
+		}
 	},
 
 	/**
