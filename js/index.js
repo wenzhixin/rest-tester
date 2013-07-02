@@ -59,9 +59,9 @@ $(function() {
 					ok(true, '测试状态码为：200。', function($json) {
 						if (!data) return;
 						new PrettyJSON.view.Node({ 
-			                el: $json, 
-			                data: data
-			            });
+							el: $json, 
+							data: data
+						});
 					});
 					if (callback) callback();
 				});
