@@ -99,7 +99,7 @@ $(function() {
 			if (request.enable === false) return;
 			onRequest(request);
 		});
-	};
+	}
 	
 	main();
 });
